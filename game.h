@@ -170,8 +170,8 @@ out:
                 tle=0;
                 counte = counte+10;
 a:
-                f.x = rand() % N;                                   // khana khawar por notun random khana banano
-                f.y = rand() % M;
+                f.x = rand_r() % N;                                   // khana khawar por notun random khana banano
+                f.y = rand_r() % M;
 
                 for(int i=0; i<108; i++)
                 {
@@ -197,8 +197,8 @@ a:
                 {
 b:
                     BonusSound.play();
-                    bf.x = rand() % N;
-                    bf.y = rand() % M;
+                    bf.x = rand_r() % N;
+                    bf.y = rand_r() % M;
 
                     for(int i=0; i<108; i++)
                     {
@@ -256,7 +256,6 @@ b:
         window.clear();                                                        // ehon khali window te aka-aki
         if(!over)
         {
-
             for (int i = 0; i<N; i++)                                              //saap jeihan dia jaibo, oihaner block akano
                 for (int j = 0; j<M; j++)
                 {
@@ -293,7 +292,6 @@ b:
 
             if((tle<50)&&(num%7==0))
                 window.draw(sBon);
-
         }
         else
         {
